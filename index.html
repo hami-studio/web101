@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,700" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="logo"><path d="M22.65 14.39L12 22.13 1.35 14.39a.84.84 0 0 1-.3-.94l1.22-3.78 2.44-7.51A.42.42 0 0 1 4.82 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.49h8.1l2.44-7.51A.42.42 0 0 1 18.6 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.51L23 13.45a.84.84 0 0 1-.35.94z"></path></svg>
+      <nav>
+        <a href="#s1">01</a>
+        <a href="#s2">02</a>
+        <a href="#s3">03</a>
+      </nav>
+    </header>
+    <main>
+      <div id="s1" class="slide green">
+        <div class="content">
+          <h4>Chapter 01</h4>
+          <h1>Grow</h1>
+          <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+      <div id="s2" class="slide garden">
+        <div class="content">
+          <h4>Chapter 02</h4>
+          <h1>Leafy</h1>
+          <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+      <div id="s3" class="slide greens">
+        <div class="content">
+          <h4>Chapter 03</h4>
+          <h1>Greens</h1>
+          <p class="copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="box">
+        <a class="share">-</a>
+        <a class="info">info</a>
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript">
+      if( $( window ).width() >= 480 ){
+      $(function() {
+          $('header a').bind('click',function(event){
+              var $anchor = $(this);
+
+              $('html, body').stop().animate({
+                  scrollTop: $($anchor.attr('href')).offset().top-0
+              }, 1500,'easeInOutExpo');
+
+              event.preventDefault();
+          });
+      });
+
+      }
+      else {
+      $(function() {
+          $('header a').bind('click',function(event){
+              var $anchor = $(this);
+
+              $('html, body').stop().animate({
+                  scrollTop: $($anchor.attr('href')).offset().top-0
+              }, 1500,'easeInOutExpo');
+
+              event.preventDefault();
+          });
+      });
+      }
+    </script>
+  </body>
+</html>

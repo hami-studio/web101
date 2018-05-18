@@ -1,0 +1,84 @@
+/* reset */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+/* setup */
+body{
+  font-family: 'Rubik', sans-serif;
+  color: white;
+  background-color: #2D372B;
+}
+
+/* typography */
+a{color: white; margin-right:10vw; line-height: 20vh; transition: opacity 1s; cursor: pointer;}
+header a:hover{opacity: .5;}
+h1{font-size: 10rem; font-weight: 700;}
+h4{font-size: 1.5rem; font-weight: 400; letter-spacing: 1px;}
+p{letter-spacing: 2px;}
+.copy{ width: 25vw; margin-top: 10vh;}
+
+/* layout */
+header {
+  width: 100%;
+  height: 20vh;
+  position: fixed;
+  z-index: 10;
+}
+.logo{
+  width: 2vw;
+  height: 100%;
+  margin-left: 5vh;
+}
+nav{
+  position: absolute;
+  top: 0;
+  left: 25%;
+}
+.slide{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+.content{
+  position: absolute;
+  top: 30%;
+  left: 25%;
+}
+footer{
+  width: 100%;
+  height: 30vh;
+  position: fixed;
+  bottom: 0;
+}
+.box{
+  width: 15vh;
+  height: 30vh;
+  position: absolute;
+  right: 0;
+  font-size: 0; /* remove space bw a elements */
+}
+.box a{
+  display: inline-block;
+  width: 100%;
+  height: 50%;
+  margin: 0;
+  line-height: 15vh;
+  text-align: center;
+}
+a.share{background-color: #FFBA00;}
+a.info{background-color: black;}
+.box a:hover{color: black; background-color: #EBEBEB; transition: all 1s;}
+
+/* images */
+.green{background-image: url(../img/02.jpg); background-size: cover;}
+.garden{background-image: url(../img/01.jpg); background-size: cover;}
+.greens{background-image: url(../img/03.jpg); background-size: cover;}
+
+::-webkit-scrollbar {
+  display: none;  // Safari and Chrome
+}
